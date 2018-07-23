@@ -8,11 +8,11 @@
 <body>
 
 	<div id="app">
-		<input type="submit" name="upVote" v-on:click="upVote" value="upVote">
+		<input type="submit" name="upVote" v-on:click="upvote" value="upVote"><br>
 
-		<input type="submit" name="downVote" v-on:click="downVote" value="downVote">
+		<input type="submit" name="downVote" v-on:click="downvote" value="downVote"><br>
 
-		<input type="submit" name="clear" v-on:click="clear" value="clear">
+		<input type="submit" name="clear" v-on:click="clear" value="clear"><br>
 
 		<span>{{votes}}</span>
 	</div>
@@ -24,9 +24,9 @@
 			votes: 0
 		},
 		methods:{
-			upVote: function(){ this.msg++ },
-			downVote: function(){ this.msg-- },
-			clear: function(){ this.msg = 0 }
+			upvote: function(){ this.votes++ },
+			downvote: function(){ this.votes > 0 ? this.votes-- : this.votes },
+			clear: function(){ this.votes = 0 }
 		}
 	});
 	</script>
