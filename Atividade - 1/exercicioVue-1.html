@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Atividade 1</title>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+	<div id="app">
+		<input v-model=	"saudacao"/> <br>
+		<input v-model= "nome"> <br>
+		<span>{{saudacao}} {{nome}}!</span>		
+	</div>
+
+	<script type="text/javascript">
+	var app = new Vue({
+		el:"#app",
+		data:{
+			saudacao: '',
+			nome: ''
+		}
+	});
+	</script>
+
+</body>
+</html>

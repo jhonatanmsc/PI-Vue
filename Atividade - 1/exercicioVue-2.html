@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Atividade 2</title>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+	<div id="app">
+		<input v-model=	"habilitacao"/> <br>
+		<span v-if="habilitacao == 'A'">
+			Você pode dirigir moto.
+		</span>
+		<span v-else-if="habilitacao == 'B'">
+			Você pode dirigir carro
+		</span>	
+		<span v-else-if="habilitacao == 'D'">
+			Você pode dirigir carro e caminhão
+		</span>
+	</div>
+
+	<script type="text/javascript">
+	var res;
+	var app = new Vue({
+		el:"#app",
+		data:{
+			habilitacao: '' 
+		}
+	});
+	</script>
+
+</body>
+</html>

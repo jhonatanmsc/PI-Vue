@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Atividade 3</title>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+	<div id="app">
+		<input v-model=	"num"/> <br>
+
+		<span v-for="n in msg()">
+			{{n}}&nbsp
+		</span>
+	</div>
+
+	<script type="text/javascript">
+	var app = new Vue({
+		el:"#app",
+		data:{
+			num: '',
+			msg: function(){
+				let res = [];
+				for (var i = 1; i <= this.num; i++) {
+					if( !(i % 2) ){
+						res.push(i);
+					}	
+				}
+				return res;
+			}
+		}
+	});
+	</script>
+
+</body>
+</html>
